@@ -14,3 +14,16 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+$web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
+
+@import url($web-font-path);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.header-md{
+	.toolbar-background{
+		background-color: $main-color;
+	}
+}
+

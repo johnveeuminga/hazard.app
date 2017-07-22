@@ -1,3 +1,16 @@
 page-home {
+	.full-screen{
+		height: 100%;
+		background-color: $main-color;
+		color: white;
+	}
+
+	.button{
+		border-width: 2px;
+		margin-bottom: 0.7rem;
+	}
+	.button-inner{
+		font-weight: 700;
+	}
 
 }

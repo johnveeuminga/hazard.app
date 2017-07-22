@@ -1,18 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content>  
+    <div id="home-page" class="d-flex align-items-center full-screen">
+        <div class="container-fluid col-md-4 p-2" text-center>
+            <h1 class="font-weight-bold pb-5">
+                HAZARD
+            </h1>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+            <button ion-button outline block color="light" (click)="openPreparePage()">Prepare</button>
+            <button ion-button outline block color="light" (click)="openAssessPage()">Assess</button>
+            <button ion-button outline block color="light" (click)="openLocatePage()">Locate</button>
+            <button ion-button outline block color="light" (click)="openContactPage()">Contact</button>
+        </div>
+    </div>
 </ion-content>
