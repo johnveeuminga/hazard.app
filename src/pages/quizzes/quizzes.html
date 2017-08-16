@@ -1,0 +1,51 @@
+<!--
+  Generated template for the QuizzesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quizzes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <p *ngFor = "let question of questions; let i = index">
+      <span class="font-weight-bold" ion-text color="primary">#{{i+1}}.</span> {{question.question}}
+      <ion-list *ngIf="(question.type==='multiplechoice')" radio-group [(ngModel)]="userAnswers[i]">
+        <ion-item *ngFor="let choice of answers[i].choices; let i = index" text-wrap>
+          <ion-label>{{choice}}</ion-label>
+          <ion-radio value={{i}}></ion-radio>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="(question.type==='trueorfalse')" radio-group [(ngModel)]="userAnswers[i]">
+        <ion-item *ngFor="let choice of answers[i].choices; let i = index" text-wrap>
+          <ion-label>{{choice}}</ion-label>
+          <ion-radio value={{i}}></ion-radio>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="(question.type==='multipleans')">
+        <ion-item *ngFor="let choice of answers[i].choices; let z = index" text-wrap>
+          <ion-label>{{choice}}</ion-label>
+          <ion-checkbox (ionChange)="checkboxChecked(i, z)"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="(question.type==='slider')">
+        <span class="font-weight-bold">Current value: {{userAnswers[i]}}</  span>
+        <ion-item>
+          <ion-range min="0" max="100" [(ngModel)]="userAnswers[i]" color="secondary">
+            <ion-label range-left>0</ion-label>
+            <ion-label range-right>100</ion-label>
+          </ion-range>
+        </ion-item>
+      </ion-list>
+    </p>
+  </div>
+
+  <button ion-button [disabled]="!enableSubmit()" block color="primary" (click)="submit()">Submit</button>
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { PrepareShowPage } from '../prepare-show/prepare-show'
 
 /**
  * Generated class for the PreparePage page.
@@ -19,6 +20,10 @@ export class PreparePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PreparePage');
+  }
+
+  goToPreparePage(module){
+    this.navCtrl.push(PrepareShowPage, {module: module})
   }
 
 }

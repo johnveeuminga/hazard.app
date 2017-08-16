@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { Http } from '@angular/http';
+import { CallNumber } from '@ionic-native/call-number'
+
 
 /**
  * Generated class for the ContactPage page.
@@ -14,11 +17,28 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  contacts: any;
+
+  constructor(public call:CallNumber, public http: Http, public navCtrl: NavController, public navParams: NavParams) {
+    this.http.get('assets/contact-list.json')
+      .map(contacts => contacts.json())
+      .subscribe( data => {
+        this.contacts = data
+      })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactPage');
+  }
+
+  callNumber(number){
+    this.call.callNumber(number, true)
+      .then(() => {
+        console.log("dialed")
+      })
+      .catch((err)=>{
+        console.log(err)
+      })
   }
 
 }

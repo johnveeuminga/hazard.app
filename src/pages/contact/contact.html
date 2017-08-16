@@ -14,5 +14,27 @@
 
 
 <ion-content padding>
+  <div class="text-center">
+    <h1 class=" font-weight-bold text-uppercase" ion-text color="primary">Contact authorities</h1>
+    <p>Contact authorities in case of emergency.</p>
+  </div>
 
+  <div class="contact-list">
+    <ion-card *ngFor = "let contact of contacts">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <div float-left class="w-75">
+                <span class="text-uppercase font-weight-bold d-block">{{contact.name}}</span>
+                <span class="text-center">{{contact.number}}</span>
+            </div>
+            
+            <div float-right class="d-flex align-items-center justify-content-center w-25 border-left-2"(tap)="callNumber(contact.number)">
+              <ion-icon name="call" class="text-center call-icon"></ion-icon>
+            </div>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

@@ -24,41 +24,14 @@
 	    			Educate yourself with essential information during calamities.
 	    		</p>
 	    	</div>
-	    	<button ion-button outline block color="dark" >
-	    		<div>
-	    			<ion-icon name="checkmark"></ion-icon><br>
-	    			<label class="font-weight-bold">Essentials</label>
-	    		</div>
-	    	</button>
-	        <button ion-button outline block color="dark" >
-	        	<div>
-	        		<ion-icon name="flame"></ion-icon><br>
-	        		<label class="font-weight-bold">Fire</label>
-	        	</div>
+			<button ion-button outline block color="dark" (click)="goToPreparePage(2)">
+	        		Fire
 	        </button>
-	        <button ion-button outline block color="dark" >
-	        	<div>
-	        		<ion-icon name="alert"></ion-icon><br>
-	        		<label class="font-weight-bold">Volcano Eruptions</label>
-	        	</div>
+	        <button ion-button outline block color="dark" (click)="goToPreparePage(3)">
+	        		Typhoons
 	        </button>
-	        <button ion-button outline block color="dark" >
-	        	<div>
-	        		<ion-icon name="alert"></ion-icon><br>
-	        		<label class="font-weight-bold">Tsunami</label>
-	        	</div>
-	        </button>
-	        <button ion-button outline block color="dark" >
-	        	<div>
-	        		<ion-icon name="alert"></ion-icon><br>
-	        		<label class="font-weight-bold">Typhoons</label>
-	        	</div>
-	        </button>
-	        <button ion-button outline block color="dark" >
-	        	<div>
-	        		<ion-icon name="alert"></ion-icon><br>
-	        		<label class="font-weight-bold">Earthquakes</label>
-	        	</div>
+	        <button ion-button outline block color="dark" (click)="goToPreparePage(4)">
+	        		Earthquakes
 	        </button>
 	    </div>
 	</div>

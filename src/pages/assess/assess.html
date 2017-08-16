@@ -24,65 +24,29 @@
 	    			Take assessment quizes below to know if you're disaster-ready.
 	    		</p>
 	    	</div>
-	    	<ion-grid>
-	    		<ion-row class="ribbon-container">
-	    			<ion-col>
-	    				<div class="text-center">
-	    					<ion-icon name="ribbon"></ion-icon>
-	    				</div>
-	    			</ion-col>
-	    			<ion-col>
-	    				<div class="text-center">
-	    					<ion-icon name="ribbon"></ion-icon>
-	    				</div>
-	    			</ion-col>
-	    			<ion-col>
-	    				<div class="text-center">
-	    					<ion-icon name="ribbon"></ion-icon>
-	    				</div>
-	    			</ion-col>
-	    		</ion-row>
-	    	</ion-grid>
-	    	<button ion-button outline block color="dark" >
-	    		<div>
-	    			<ion-icon name="checkmark"></ion-icon><br>
-	    			<label class="font-weight-bold">Essentials Quiz:</label>
-	    			<p>Quiz about the essentials for disaster.</p>
-	    		</div>
-	    	</button>
-	    	<button ion-button outline block color="dark" >
-	    		<div>
-	    			<ion-icon name="checkmark"></ion-icon><br>
-	    			<label class="font-weight-bold">Essentials Quiz:</label>
-	    			<p>Quiz about the essentials for disaster.</p>
-	    		</div>
-	    	</button>
-	    	<button ion-button outline block color="dark" >
+	    	<button ion-button outline block color="dark" (click)="goToQuizzesPage(2)" text-wrap [ngClass] ="{'attempted': fireScore}">
 	    		<div>
 	    			<ion-icon name="flame"></ion-icon><br>
 	    			<label class="font-weight-bold">Fire Quiz:</label>
-	    			<p>Quiz about the essentials for fire outbreaks.</p>
+						<p>Quiz about the essentials for fire outbreaks.</p>
+						<span class="font-weight-bold" *ngIf="fireScore">Latest Score: {{fireScore | number:'1.1-2'}}%</span>
+						
 	    		</div>
 	    	</button>
-	    	<button ion-button outline block color="dark" >
-	    		<div>
+	    	<button ion-button outline block color="dark" (click)="goToQuizzesPage(4)" text-wrap [ngClass] ="{'attempted': tyScore}">
+	    		<div text-wrap>
 	    			<ion-icon name="alert"></ion-icon><br>
 	    			<label class="font-weight-bold">Typhoon Quiz:</label>
-	    			<p>Quiz about the essentials for when typhoon strikes.</p>
+						<p>Quiz about the essentials for when typhoon strikes.</p>
+						<span class="font-weight-bold" *ngIf="tyScore">Latest Score: {{tyScore | number:'1.1-2'}}%</span>
 	    		</div>
 	    	</button>
-	    	<button ion-button outline block color="dark" >
+	    	<button ion-button outline block color="dark" (click)="goToQuizzesPage(1)" text-wrap [ngClass] ="{'attempted': eqScore}">
 	    		<div>
 	    			<ion-icon name="alert"></ion-icon><br>
 	    			<label class="font-weight-bold">Earhquake Quiz:</label>
-	    			<p>Quiz about the essentials when earhquake shakes your area.</p>
-	    		</div>
-	    	</button>
-	    	<button ion-button outline block color="dark" >
-	    		<div>
-	    			<ion-icon name="alert"></ion-icon><br>
-	    			<label class="font-weight-bold">Volcano Eruption Quiz:</label>
-	    			<p>Quiz about the essentials for when a volcano near you erupts.</p>
+						<p>Quiz about the essentials when earhquake shakes your area.</p>
+						<span class="font-weight-bold" *ngIf="eqScore">Latest Score: {{eqScore | number:'1.1-2'}}%</span>
 	    		</div>
 	    	</button>
 	    </div>

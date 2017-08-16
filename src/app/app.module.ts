@@ -1,6 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
+import { HttpModule } from '@angular/http';
+import { DecimalPipe } from '@angular/common'
+import { ResultsPage } from '../pages/results/results';
+import { Geolocation } from '@ionic-native/geolocation';
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { CallNumber } from '@ionic-native/call-number'
+
+
+// import { 
+//   GoogleMaps,
+//   GoogleMap,
+//   GoogleMapsEvent,
+//   LatLng,
+//   Marker
+// } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -9,9 +25,14 @@ import { LocatePage } from '../pages/locate/locate';
 import { AssessPage } from '../pages/assess/assess';
 import { ContactPage } from '../pages/contact/contact';
 import { PreparePage } from '../pages/prepare/prepare';
+import { QuizzesPage } from '../pages/quizzes/quizzes';
+import { PrepareShowPage } from '../pages/prepare-show/prepare-show'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { QuizProvider } from '../providers/quiz/quiz';
+import { QuizComponent } from '../components/quiz/quiz';
+
 
 @NgModule({
   declarations: [
@@ -22,10 +43,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AssessPage,
     ContactPage,
     PreparePage,
+    QuizComponent,
+    QuizzesPage,
+    ResultsPage,
+    PrepareShowPage
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,12 +64,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AssessPage,
     ContactPage,
     PreparePage,
-    
+    QuizzesPage,
+    ResultsPage,
+    PrepareShowPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    QuizProvider,
+    DecimalPipe,
+    Geolocation,
+    // {provide: Geolocation, useClass:  Geolocationmock}   
+    GoogleMaps,
+    CallNumber,
+    // GoogleMap,
+    // Marker,
   ]
 })
 export class AppModule {}
