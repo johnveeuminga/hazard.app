@@ -67,7 +67,7 @@ export class LocatePage {
       places.nearbySearch({
         location: latLng,
         radius: 500,
-        types:['school', 'pharmacy', 'university', 'city_hall']
+        types:['school', 'pharmacy', 'university', 'city_hall', 'hospital']
       }, (results, status) => {
         if (status === google.maps.places.PlacesServiceStatus.OK) {
           for (var i = 0; i < results.length; i++) {
