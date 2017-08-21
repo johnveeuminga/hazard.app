@@ -58,7 +58,7 @@ ionic cordova build android
 ## Adding a contact
 To be able to add a contact in the contact list:
 1. Open a file explorer and go to C:\Users\\{your-current-user}\hazard.app\src\assets
-2. Open a "contact-list.json" using any text-editor
+2. Open "contact-list.json" using any text-editor
 3. Add a contact. Example:
 ```
     {
