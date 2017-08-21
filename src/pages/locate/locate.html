@@ -15,8 +15,8 @@
 
 <ion-content padding>
 
-	<div id="" class="d-flex align-items-center full-screen">
-	    <div class="container-fluid col-md-4 p-2" text-center>
+	<div id="full-screen" #fullScreen class="d-flex align-items-center full-screen" (click)="getSelectedMarker()">
+	    <div class="container-fluid col-md-4 pt-2" text-center>
 	    	<div class="page-header-wrapper">
 	    	<h1 class="font-weight-bold">
 	    	    Locate Necessary Areas
@@ -28,8 +28,22 @@
 		</div>
 		
 	</div>
-
-	<div #map id="map">
+	<ion-item>
+			<ion-input type="text" placeholder="Search for places..." [(ngModel)]="searchKey"></ion-input>
+			<ion-icon name="search" item-right (tap)="search()"></ion-icon>
+	</ion-item>
+	<div class="map-wrapper">
+	<div #map id="map" data-tap-disabled="true">
 		
+	</div>
+	<div class="overlay d-flex align-items-center" *ngIf="loading">
+		<p class="text-center w-100" ion-text color="light">Please wait...</p>
+	</div>
+	</div>
+
+	<div  margin-top *ngIf="selectedMarker" class="selected-place-container w-100">
+		<h2 ion-text color="primary" class="font-weight-bold">{{selectedMarker.name}}</h2>
+		<p>{{selectedMarker.vicinity || selectedMarker.formatted_address}}</p>
+		<button ion-button block class="font-weight-bold" (click)="presentActionSheet()">GET DIRECTIONS</button>
 	</div>
 </ion-content>

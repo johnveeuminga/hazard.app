@@ -1,0 +1,26 @@
+<!--
+  Generated template for the DirectionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Directions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div id="map" #map>
+
+  </div>
+
+  <div  margin-top class="selected-place-container w-100">
+      <h2 class="text-center" ion-text color="primary">DESTINATION:</h2>
+      <h2 ion-text color="primary" class="font-weight-bold">{{selectedMarker.name}}</h2>
+      <p>{{selectedMarker.vicinity||selectedMarker.formatted_address}}</p>
+    </div>
+</ion-content>

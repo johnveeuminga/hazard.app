@@ -1,0 +1,50 @@
+{
+    "fire" : 
+        {
+            "mess1" : [
+                "Create and practice a home fire escape plan with two ways out of every room.",
+                "In the event of a fire, leave your home immediately. Once you’re out of the house, stay out.",
+                "Smoke is toxic. Teach children to “get low and go” if there is smoke when they are leaving the home.",
+                "Know all of your building’s fire escape exits and use the stairs to get out. Don’t use the elevator.",
+                "Wait to call 911 until after you are out of the home."
+            ],
+
+            "mess2": [
+                "For the best protection, install smoke alarms on every level of your home, outside every sleeping area and in each bedroom.",
+                "If using gasoline-powered devices, store gasoline in a locked location where children cannot access it. Keep only small quantities in an approved container that has child safety features.",
+                "To prevent possible fires, avoid plugging several appliance cords into the same electrical socket."                
+            ]
+        },
+
+    "typhoon" : {
+        "mess1": [
+            "Make a family communications plan.",
+            "Stay informed, follow the news.",
+            "Follow instructions from government officials.",
+            "Always stay in a safe place; be aware",
+            "Have emergency supplies ready"
+        ],
+
+        "mess2" : [
+            "Don’t leave the house unless absolutely necessary. Children should be prohibited from playing in the rain or flood to prevent contracting leptospirosis and other water-borne diseases.",
+            "Protect food and water from contaminants by keeping them in sealed containers. Food should be well-cooked.",
+            "Stay away from places that will likely be inundated by rising water or waves such as beaches and riverbanks. Stay away from landslide-prone areas."
+        ]
+    },
+
+    "earthquake" :{
+        "mess1" : [
+            "Make up a plan of where to meet your family after an earthquake.",
+            "Learn the earthquake plan at your school or workplace.",
+            "If you're indoors, stand against a wall near the center of the building, stand in a doorway, or crawl under heavy furniture (a desk or table). Stay away from windows and outside doors.",
+            "If you're outdoors, stay in the open away from power lines or anything that might fall. Stay away from buildings (stuff might fall off the building or the building could fall on you).",
+            "Stay away from beaches. Tsunamis sometimes hit after the ground has stopped shaking."
+        ],
+        "mess2" : [
+            "Keep a supply of canned food, an up-to-date first aid kit, 3 gallons (11.4 liters) of water per person, dust masks and goggles, and a working battery-operated radio and flashlights in an accessible place.",
+            "Stay away from windows. In a high-rise building, expect the fire alarms and sprinklers to go off during a quake.",
+            "Do not run outside or get in a doorway as this does not provide protection from falling or flying objects, and you may not be able to remain standing."
+        ]
+    }
+
+}

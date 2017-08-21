@@ -23,9 +23,26 @@
           <h2 ion-text color="primary">{{score | number:'1.1-2'}} %</h2>
         </ion-col>
       </ion-row>
+      <ion-row >
+        <ion-col class="text-left tips-container" *ngIf='(score>=50 && score < 75) && message'>
+            <p ion-text color="primary" class="font-weight-bold">Not prepared enough! Below are a few tips for you:</p>
+            <p *ngFor = "let message of message.mess1" class="text-left">
+               {{message}}
+            </p>
+        </ion-col>
+        <ion-col class="text-center tips-container" *ngIf="score>=75 && message">
+            <p ion-text color="primary" class="font-weight-bold">It seems you already know what to do. Congratulations!</p>
+        </ion-col>
+        <ion-col class="text-left tips-container" *ngIf='score < 50 && message'>
+            <p ion-text color="primary" class="font-weight-bold">Not prepared enough! Below are a few tips for you:</p>            
+          <p *ngFor = "let message of message.mess2" class="text-left">
+            {{message}}
+         </p>
+        </ion-col>
+      </ion-row>
       <ion-row align-self-center>
         <button ion-button color="primary" block class="font-weight-bold" (click) = "goToHome()">BACK TO HOME</button>
-        </ion-row>
+      </ion-row>
     </ion-grid>
   </div>
   

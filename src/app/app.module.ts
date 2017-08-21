@@ -27,6 +27,8 @@ import { ContactPage } from '../pages/contact/contact';
 import { PreparePage } from '../pages/prepare/prepare';
 import { QuizzesPage } from '../pages/quizzes/quizzes';
 import { PrepareShowPage } from '../pages/prepare-show/prepare-show'
+import { DirectionsPage } from '../pages/directions/directions'
+import { SearchLocPage } from '../pages/search-loc/search-loc'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -46,7 +48,9 @@ import { QuizComponent } from '../components/quiz/quiz';
     QuizComponent,
     QuizzesPage,
     ResultsPage,
-    PrepareShowPage
+    PrepareShowPage,
+    DirectionsPage,
+    SearchLocPage
     
   ],
   imports: [
@@ -66,7 +70,9 @@ import { QuizComponent } from '../components/quiz/quiz';
     PreparePage,
     QuizzesPage,
     ResultsPage,
-    PrepareShowPage
+    PrepareShowPage,
+    DirectionsPage,
+    SearchLocPage
   ],
   providers: [
     StatusBar,
